@@ -35,8 +35,6 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
-    MatTableModule,
-    MatSortModule,
     MatFormFieldModule,
     MatInputModule,
     MatDatepickerModule,
@@ -45,16 +43,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatSelectModule,
     MatRadioModule,
     MatButtonModule,
-
-    MatMenuModule,
-    MatToolbarModule,
     MatCardModule,
-    // MatDatepicker,
-    // MatOptionModule,
-    MatSlideToggleModule,
-    // ErrorStateMatcher,
-    // ShowOnDirtyErrorStateMatcher
-HttpClientModule
+    HttpClientModule
 
   ],
   exports: [

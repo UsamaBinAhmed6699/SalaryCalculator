@@ -4,7 +4,7 @@ import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/materia
 import { MatDatepicker } from '@angular/material/datepicker';
 import {MomentDateAdapter, MAT_MOMENT_DATE_ADAPTER_OPTIONS} from '@angular/material-moment-adapter';
 import * as _moment from 'moment';
-import BaseSalries from '../../../assets/data/BaseSalaries.json';
+import BaseSalaries from '../../../assets/data/BaseSalaries.json';
 import SalaryRise from '../../../assets/data/SalaryRise.json';
 import CityTaxRate from '../../../assets/data/CityTaxRate.json';
 import HighIncomeTax from '../../../assets/data/HighIncomeTax.json';
@@ -75,11 +75,17 @@ export class SalaryCalculatorComponent implements OnInit {
     });
   }
 
+  //Calculate salary on submit form button .
+  //Tax rates and salary rise are configurable and get from Json files creates in assets/data forlder .
   CalculateSalary(form: any) {;
 
-    const {occupation, yearsExperience, city, incomeYear} = form.value;
-    console.log(this.selectYear);
-    let baseSalary = BaseSalries.find((salary:any) => salary.Occupation.toLowerCase() == occupation.toLowerCase())?.Salary;
+    const {
+      occupation, 
+      yearsExperience,
+      city,
+      incomeYear} = form.value;
+
+    let baseSalary = BaseSalaries.find((salary:any) => salary.Occupation.toLowerCase() == occupation.toLowerCase())?.Salary;
     let payRise = SalaryRise.find((rise: any) => (yearsExperience >= rise.MinExperience && yearsExperience <= (rise.MaxExperience ? rise.MaxExperience : yearsExperience+1)) )?.PayRise;
     let taxRate = CityTaxRate.find((rate: any) => (rate.city.toLowerCase()== city.toLowerCase() && rate.year == this.selectYear.getFullYear()))?.rate
 
