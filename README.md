@@ -23,9 +23,11 @@ Packages used are
 ## How to Install and Run the Project
 Open the project in VS Code or any supporting IDE , run the following commands 
 
-1. $ "npm install"
-2. $ "ng build"
-3. $ "ng server"
+```
+npm install
+ng build
+ng server
+```
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
