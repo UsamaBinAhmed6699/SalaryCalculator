@@ -4,8 +4,8 @@ import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/materia
 import { MatDatepicker } from '@angular/material/datepicker';
 import {MomentDateAdapter, MAT_MOMENT_DATE_ADAPTER_OPTIONS} from '@angular/material-moment-adapter';
 import * as _moment from 'moment';
-import BaseSalries from '../../../assets/data/baseSalaries.json';
-import SalaryRise from '../../../assets/data/salaryRise.json';
+import BaseSalries from '../../../assets/data/BaseSalaries.json';
+import SalaryRise from '../../../assets/data/SalaryRise.json';
 import CityTaxRate from '../../../assets/data/CityTaxRate.json';
 import HighIncomeTax from '../../../assets/data/HighIncomeTax.json';
 
@@ -46,7 +46,7 @@ export class SalaryCalculatorComponent implements OnInit {
   totalSalary: number = 0;
   baseTax: number = 0;
   monthlyIncomeAfterTax: number = 0;
-  
+  form: FormGroup = new FormGroup({});
 
 
   chosenYearHandler(ev: { _d: any; }, input: any){
@@ -54,12 +54,17 @@ export class SalaryCalculatorComponent implements OnInit {
     this.selectYear = _d;
     this.picker.close()
   }
-  form: FormGroup = new FormGroup({});
+  
 
   
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
+    this.createForm();
+  }
+
+  createForm()
+  {
     this.form = this.fb.group({
       yearsExperience: [null, [Validators.required, Validators.maxLength(10)]],
       occupation: [null, [Validators.required]],
