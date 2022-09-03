@@ -74,7 +74,7 @@ describe('SalaryCalculatorComponent', () => {
       "incomeYear": component.selectYear.getFullYear()
     });
 
-    expect(component.saveDetails(component.form)).toBeGreaterThan(0);
+    expect(component.CalculateSalary(component.form)).toBeGreaterThan(0);
   });
 
   it('should not return any value, when entering wrong occupation', () => {
@@ -86,7 +86,7 @@ describe('SalaryCalculatorComponent', () => {
       "incomeYear": component.selectYear.getFullYear()
     });
 
-    expect(component.saveDetails(component.form)).toBeNaN;
+    expect(component.CalculateSalary(component.form)).toBeNaN;
   });
 
   it('should not return any value, when entering wrong year', () => {
@@ -98,7 +98,7 @@ describe('SalaryCalculatorComponent', () => {
       "incomeYear": component.selectYear.getFullYear()
     });
 
-    expect(component.saveDetails(component.form)).toBeNaN;
+    expect(component.CalculateSalary(component.form)).toBeNaN;
   });
 
 });

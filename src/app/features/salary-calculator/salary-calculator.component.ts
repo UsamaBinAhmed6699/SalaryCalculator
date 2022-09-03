@@ -38,6 +38,8 @@ export const MY_FORMATS = {
 })
 
 export class SalaryCalculatorComponent implements OnInit {
+
+  // Component Level properties and variables created 
   @ViewChild('picker', { static: false })
   private picker!: MatDatepicker<Date>;  
   selectYear: any;
@@ -62,7 +64,7 @@ export class SalaryCalculatorComponent implements OnInit {
   ngOnInit(): void {
     this.createForm();
   }
-
+//Form created for Salary Calculator
   createForm()
   {
     this.form = this.fb.group({
@@ -73,7 +75,7 @@ export class SalaryCalculatorComponent implements OnInit {
     });
   }
 
-  saveDetails(form: any) {;
+  CalculateSalary(form: any) {;
 
     const {occupation, yearsExperience, city, incomeYear} = form.value;
     console.log(this.selectYear);
