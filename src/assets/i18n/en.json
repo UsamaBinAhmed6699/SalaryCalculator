@@ -1,0 +1,26 @@
+{
+    "Validation" : {
+        "ExperienceRequired" : "Experience is Required",
+        "OccupationRequired" : "Select Occupation",
+        "YearRequired" : "Year is Required",
+        "CityRequired" : "City is Required"
+    },
+    "Labels" : {
+        "Experienceyears" : "No. of Years of Experience",
+        "Occupation" : "Occupation",
+        "Year" :"Year",
+        "City" :"City :",
+        "CalculatedSalary" :"Calculated Salary",
+        "SalaryCalculator" :"Salary Calculator",
+        "MonthlyIncome" : "Monthly Income",
+        "MonthlyTax" : "Monthly Tax",
+        "Monthlyincomeaftertax" :"Monthly Income after Tax",
+        "YearlyIncome":"Yearly Income",
+        "YearlyTax":"Yearly Tax",
+        "YearlyIncomeAfterTax" :"Yearly Income after Tax"
+    },
+    "CalculatorControls" : {
+        "Calculate" : "Calculate"
+    }
+
+}

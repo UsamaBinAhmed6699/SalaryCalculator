@@ -1,0 +1,15 @@
+[
+    {
+      "Occupation" : "Programmer",
+      "Salary" :30000
+    },
+    {
+      "Occupation" : "Teacher",
+      "Salary" :27000
+    },
+    {
+      "Occupation" : "Cashier",
+      "Salary" :25000
+      
+    }
+]

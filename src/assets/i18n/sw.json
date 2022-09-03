@@ -1,0 +1,26 @@
+{
+    "Validation" : {
+        "ExperienceRequired" : "Erfarenhet krävs",
+        "OccupationRequired" : "Välj Yrke",
+        "YearRequired" : "Välj år",
+        "CityRequired" : "Välj Stad"
+    },
+    "Labels" : {
+        "Experienceyears" : "Antal års erfarenhet",
+        "Occupation" : "Ockupation",
+        "Year" :"Välj ett år",
+        "City" :"Stad :",
+        "CalculatedSalary" :"Beräknad lön",
+        "SalaryCalculator" :"Löneberäknare",
+        "MonthlyIncome" : "Månadsinkomst",
+        "MonthlyTax" : "Månadsskatt",
+        "Monthlyincomeaftertax" :"Månadsinkomst efter skatt",
+        "YearlyIncome":"Årsinkomst",
+        "YearlyTax":"Årlig skatt",
+        "YearlyIncomeAfterTax" :"Årsinkomst efter skatt"
+    },
+    "CalculatorControls" : {
+        "Calculate" : "Beräkna"
+    }
+
+}

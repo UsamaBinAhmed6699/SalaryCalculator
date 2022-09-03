@@ -1,0 +1,12 @@
+[
+    {
+    "MinRange" : 36000,
+    "MaxRange" : 45000,
+    "TaxRate" :50
+   },
+   {
+    "MinRange" : 45000,
+    "MaxRange" : null,
+    "TaxRate" :70
+   }
+]

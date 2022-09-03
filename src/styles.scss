@@ -1,0 +1,115 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+body {
+  margin: 0;
+  // font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: "Muli" !important;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 90%;
+  margin: auto;
+}
+
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: solid rgba(0, 0, 0, 0.15);
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+    inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+}
+
+.form-control-dark {
+  color: #fff;
+  background-color: var(--bs-dark);
+  border-color: var(--bs-gray);
+}
+.form-control-dark:focus {
+  color: #fff;
+  background-color: var(--bs-dark);
+  border-color: #fff;
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+}
+
+.bi {
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
+
+.text-small {
+  font-size: 85%;
+}
+
+.dropdown-toggle {
+  outline: 0;
+}
+
+.input-container .mat-form-field {
+  display: block;
+}
+
+.input-container .mat-radio-button {
+  margin-right: 12px;
+}
+
+.input-container .mat-form-field-subscript-wrapper {
+  padding-left: 0 !important;
+}
+
+.lead {
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+}
+
+main > .container {
+  padding: 10px;
+}
+
+main.flex-shrink-0 {
+  height: calc(100vh - 185px);
+  padding: 0 10px;
+}
+
+header.box-shadow {
+  box-shadow: 0 0.5em 1.5em rgb(0 0 0 / 10%), 0 0.125em 0.5em rgb(0 0 0 / 15%);
+  background: #0d6efd;
+}
+
+header .bg-dark {
+  background: #0d6efd !important;
+  color: #fff !important;
+}
+
+li.list-group-item {
+  line-height: 26px !important;
+}
+
+.material-symbols-outlined {
+  font-size: 30px;
+}
+
+.box-shadow .btn-primary {
+  background-color: #0353c9 !important;
+}
+
+@media only screen and (max-width: 800px) {
+  main.flex-shrink-0 {
+    height: 100% !important;
+    margin-top: 20px !important;
+  }
+
+  .mb-5 {
+    margin-bottom: 20px !important;
+  }
+
+  .login-btn {
+    margin-top: 10px;
+  }
+}

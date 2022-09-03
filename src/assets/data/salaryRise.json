@@ -1,0 +1,22 @@
+[
+{
+"MinExperience" : 0 ,
+"MaxExperience" : 3,
+"PayRise"  : 0
+} ,
+{
+"MinExperience" : 4 ,
+"MaxExperience" : 7,
+"PayRise"  : 20
+},
+{
+"MinExperience" : 8 ,
+"MaxExperience" : 10,
+"PayRise"  : 40
+},
+{
+"MinExperience" : 11 ,
+"MaxExperience" : null,
+"PayRise"  : 60
+}
+]

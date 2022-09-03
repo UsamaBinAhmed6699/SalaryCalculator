@@ -1,0 +1,22 @@
+[
+    {
+    "city" : "Stockholm",
+     "year" : "2019",
+     "rate" : 30
+   },
+   {
+    "city" : "Stockholm",
+     "year" : "2020",
+     "rate" : 29
+   },
+   {
+    "city" : "Gothenburg",
+     "year" : "2019",
+     "rate" : 25
+   },
+   {
+    "city" : "Gothenburg",
+     "year" : "2019",
+     "rate" : 22
+   }
+]
