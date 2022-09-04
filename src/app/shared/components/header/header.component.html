@@ -1,52 +1,57 @@
 <header class="box-shadow">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand">
-                <span class="material-symbols-outlined">
-                    Home
-                </span>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand">
+        <span class="material-symbols-outlined"> Home </span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <a class="nav-link" [routerLink]="'/Features/salary-calculator'">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0)">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0)">Contact </a>
+          </li>
+        </ul>
+
+        <div class="localization-icon">
+          <span class="material-symbols-outlined" [matMenuTriggerFor]="menu">
+            Language
+          </span>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="changelanguage('en')">
+              <span>en</span>
             </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)">Contact </a>
-                    </li>
-                </ul>
-
-                <div class="localization-icon">
-                    <span class="material-symbols-outlined" [matMenuTriggerFor]="menu">
-                        Language
-                    </span>
-                    <mat-menu #menu="matMenu">
-                        <button mat-menu-item (click)="changelanguage('en')">
-                            <span>en</span>
-                        </button>
-                        <button mat-menu-item (click)="changelanguage('sw')">
-                            <span>sw</span>
-                        </button>
-                    </mat-menu>
-                </div>
-                <form class="d-flex me-3">
-                    <input class="form-control me-2" type="text" placeholder="Search">
-                    <button class="btn btn-primary" type="button">Search</button>
-                </form>
-
-                <div class="login-btn d-flex align-items-center"><span class="material-symbols-outlined"> login
-                    </span>
-                    <p class="mb-0 ms-1">Login</p>
-                </div>
-            </div>
+            <button mat-menu-item (click)="changelanguage('sv')">
+              <span>sv</span>
+            </button>
+          </mat-menu>
         </div>
-    </nav>
+        <form class="d-flex me-3">
+          <input class="form-control me-2" type="text" placeholder="Search" />
+          <button class="btn btn-primary" type="button">Search</button>
+        </form>
+
+        <div class="login-btn d-flex align-items-center">
+          <span class="material-symbols-outlined"> login </span>
+          <p class="mb-0 ms-1">Login</p>
+        </div>
+      </div>
+    </div>
+  </nav>
 </header>

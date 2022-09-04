@@ -9,10 +9,9 @@ describe('HeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HeaderComponent ],
-     imports :[MatMenuModule]
-    })
-    .compileComponents();
+      declarations: [HeaderComponent],
+      imports: [MatMenuModule],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;

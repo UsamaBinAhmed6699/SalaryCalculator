@@ -1,4 +1,8 @@
 {
+    "Placeholder" :{
+        "EnterExperience" : "Ange Experience",
+        "OccupationYear" : "Välj år"
+    },
     "Validation" : {
         "ExperienceRequired" : "Erfarenhet krävs",
         "OccupationRequired" : "Välj Yrke",

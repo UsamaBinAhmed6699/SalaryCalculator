@@ -1,4 +1,8 @@
 {
+    "Placeholder" :{
+        "EnterExperience" : "Enter Experience",
+        "OccupationYear" : "Select Year"
+    },
     "Validation" : {
         "ExperienceRequired" : "Experience is Required",
         "OccupationRequired" : "Select Occupation",

@@ -3,16 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from '../shared/components/not-found/not-found.component';
 import { SalaryCalculatorComponent } from './salary-calculator/salary-calculator.component';
 
-
 const routes: Routes = [
-    {
-      path: "salary-calculator",
-      component : SalaryCalculatorComponent
-}
+  {
+    path: 'salary-calculator',
+    component: SalaryCalculatorComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class FeaturesRoutingModule { }
+export class FeaturesRoutingModule {}

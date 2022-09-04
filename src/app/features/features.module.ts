@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { FeaturesRoutingModule } from './features-routing.module';
 import { SalaryCalculatorComponent } from './salary-calculator/salary-calculator.component';
 import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { SharedModule } from '../shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
-import { MatDatepickerModule, MatDatepicker } from '@angular/material/datepicker';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
@@ -21,12 +21,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { HttpClientModule } from '@angular/common/http';
 
-
-
 @NgModule({
-  declarations: [
-    SalaryCalculatorComponent
-  ],
+  declarations: [SalaryCalculatorComponent],
   imports: [
     CommonModule,
     FeaturesRoutingModule,
@@ -44,13 +40,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatRadioModule,
     MatButtonModule,
     MatCardModule,
-    HttpClientModule
-
+    HttpClientModule,
   ],
-  exports: [
-
-  ],
-  providers :[HttpClientModule]
-
+  exports: [],
+  providers: [HttpClientModule],
 })
-export class FeaturesModule { }
+export class FeaturesModule {}

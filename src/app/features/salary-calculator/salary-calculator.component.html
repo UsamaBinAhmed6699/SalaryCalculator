@@ -3,43 +3,56 @@
     <div class="col-md-7 col-lg-8">
       <div class="mb-5">
         <div class="d-flex align-items-center mb-2">
-          <span class="material-symbols-outlined">
-            calculate
-          </span>
-          <h1 class="mb-0 ms-1">{{'Labels.SalaryCalculator' | translate}}</h1>
+          <span class="material-symbols-outlined"> calculate </span>
+          <h1 class="mb-0 ms-1">{{ "Labels.SalaryCalculator" | translate }}</h1>
         </div>
-       
       </div>
       <form [formGroup]="form" (ngSubmit)="CalculateSalary(form)">
-
         <div class="row g-3">
           <div class="col-sm-6">
             <div class="input-container">
               <mat-form-field appearance="fill">
-                <mat-label>{{'Labels.Experienceyears' | translate}}</mat-label>
-                <input matInput maxlength="2" inputmode="tel" placeholder="Enter experience"
-                  formControlName="yearsExperience" #nameInput>
+                <mat-label>{{
+                  "Labels.Experienceyears" | translate
+                }}</mat-label>
+                <input
+                  matInput
+                  maxlength="2"
+                  inputmode="tel"
+                  placeholder= "{{ 'Placeholder.EnterExperience' | translate }}"
+                  formControlName="yearsExperience"
+                  #nameInput
+                />
 
-                <mat-error *ngIf="form.controls['yearsExperience'].errors?.['required']">{{'Validation.ExperienceRequired' | translate}}
+                <mat-error
+                  *ngIf="form.controls['yearsExperience'].errors?.['required']"
+                  >{{ "Validation.ExperienceRequired" | translate }}
                 </mat-error>
-                <mat-error *ngIf="form.controls['yearsExperience'].errors?.['maxlength']">
+                <mat-error
+                  *ngIf="form.controls['yearsExperience'].errors?.['maxlength']"
+                >
                   Only 2 digit value is allowed
                 </mat-error>
               </mat-form-field>
             </div>
-
           </div>
 
           <div class="col-sm-6">
             <div class="input-container">
               <mat-form-field appearance="fill">
-                <mat-label>{{'Labels.Occupation' | translate}}</mat-label>
-                <mat-select matNativeControl name="occupation" formControlName="occupation">
+                <mat-label>{{ "Labels.Occupation" | translate }}</mat-label>
+                <mat-select
+                  matNativeControl
+                  name="occupation"
+                  formControlName="occupation"
+                >
                   <mat-option value="programmer">Programmer</mat-option>
                   <mat-option value="teacher">Teacher</mat-option>
                   <mat-option value="cashier">Cashier</mat-option>
                 </mat-select>
-                <mat-error *ngIf="form.controls['yearsExperience'].errors?.['required']">{{'Validation.OccupationRequired' | translate}}
+                <mat-error
+                  *ngIf="form.controls['yearsExperience'].errors?.['required']"
+                  >{{ "Validation.OccupationRequired" | translate }}
                 </mat-error>
               </mat-form-field>
             </div>
@@ -48,14 +61,31 @@
           <div class="col-12">
             <div class="input-container">
               <mat-form-field class="example-full-width" appearance="fill">
-                <mat-label>{{'Labels.Year' | translate}}</mat-label>
-                <input [(ngModel)]="selectYear" formControlName="incomeYear" [min]="minDate" [max]="maxDate" matInput
-                  [matDatepicker]="picker" readonly />
-                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker startView="multi-year" (yearSelected)="chosenYearHandler($event, picker)">
+                <mat-label>{{ "Labels.Year" | translate }}</mat-label>
+                <input
+                  [(ngModel)]="selectYear"
+                  formControlName="incomeYear"
+                  placeholder= "{{ 'Placeholder.OccupationYear' | translate }}"
+                  [min]="minDate"
+                  [max]="maxDate"
+                  matInput
+                  [matDatepicker]="picker"
+                  readonly
+                />
+                <mat-datepicker-toggle
+                  matSuffix
+                  [for]="picker"
+                ></mat-datepicker-toggle>
+                <mat-datepicker
+                  #picker
+                  startView="multi-year"
+                  (yearSelected)="chosenYearHandler($event, picker)"
+                >
                 </mat-datepicker>
 
-                <mat-error *ngIf="form.controls['incomeYear'].errors?.['required']">{{'Validation.YearRequired' | translate}}
+                <mat-error
+                  *ngIf="form.controls['incomeYear'].errors?.['required']"
+                  >{{ "Validation.YearRequired" | translate }}
                 </mat-error>
               </mat-form-field>
             </div>
@@ -63,73 +93,94 @@
 
           <div class="col-12 mb-4">
             <div class="input-container">
-              <label style="margin-right: 15px;">{{'Labels.City' | translate}} </label>
+              <label style="margin-right: 15px"
+                >{{ "Labels.City" | translate }}
+              </label>
               <mat-radio-group formControlName="city">
                 <mat-radio-button value="stockholm">Stockholm</mat-radio-button>
-                <mat-radio-button value="gothenburg">Gothenburg</mat-radio-button>
+                <mat-radio-button value="gothenburg"
+                  >Gothenburg</mat-radio-button
+                >
               </mat-radio-group>
-              <mat-error *ngIf="form.controls['city'].errors?.['required']">{{'Validation.CityRequired' | translate}}
+              <mat-error *ngIf="form.controls['city'].errors?.['required']"
+                >{{ "Validation.CityRequired" | translate }}
               </mat-error>
             </div>
           </div>
         </div>
-        <button class="w-100 btn btn-lg btn-primary" type="submit" [disabled]="!form.valid">{{'CalculatorControls.Calculate' | translate}}</button>
+        <button
+          class="w-100 btn btn-lg btn-primary"
+          type="submit"
+          [disabled]="!form.valid"
+        >
+          {{ "CalculatorControls.Calculate" | translate }}
+        </button>
       </form>
     </div>
     <div class="col-md-5 col-lg-4 order-md-last">
-
       <div class="d-flex align-items-center mb-3">
-        <span class="material-symbols-outlined ">
-          calculate
-        </span>
-        <h1 class="mb-0 ms-1">{{'Labels.CalculatedSalary' | translate}}</h1>
+        <span class="material-symbols-outlined"> calculate </span>
+        <h1 class="mb-0 ms-1">{{ "Labels.CalculatedSalary" | translate }}</h1>
       </div>
 
       <ul class="list-group mb-3">
-        <li class="list-group-item d-flex justify-content-between lh-sm bg-light">
+        <li
+          class="list-group-item d-flex justify-content-between lh-sm bg-light"
+        >
           <div>
-            <p class="my-0">{{'Labels.MonthlyIncome' | translate}}</p>
+            <p class="my-0">{{ "Labels.MonthlyIncome" | translate }}</p>
           </div>
-          <span class="text-muted">{{totalSalary | currency:'kr'}}</span>
+          <span class="text-muted">{{ totalSalary | currency: "kr" }}</span>
         </li>
-        <li class="list-group-item d-flex justify-content-between lh-sm bg-light">
+        <li
+          class="list-group-item d-flex justify-content-between lh-sm bg-light"
+        >
           <div>
-            <p class="my-0">{{'Labels.MonthlyTax' | translate}}</p>
+            <p class="my-0">{{ "Labels.MonthlyTax" | translate }}</p>
           </div>
-          <span class="text-muted">{{baseTax | currency:'kr'}}</span>
+          <span class="text-muted">{{ baseTax | currency: "kr" }}</span>
         </li>
-        <li class="list-group-item d-flex justify-content-between lh-sm bg-light">
+        <li
+          class="list-group-item d-flex justify-content-between lh-sm bg-light"
+        >
           <div>
-            <p class="my-0">{{'Labels.Monthlyincomeaftertax' | translate}}</p>
+            <p class="my-0">{{ "Labels.Monthlyincomeaftertax" | translate }}</p>
           </div>
-          <span class="text-muted">{{monthlyIncomeAfterTax | currency:'kr'}}</span>
+          <span class="text-muted">{{
+            monthlyIncomeAfterTax | currency: "kr"
+          }}</span>
         </li>
-        <li class="list-group-item d-flex justify-content-between lh-sm bg-light">
+        <li
+          class="list-group-item d-flex justify-content-between lh-sm bg-light"
+        >
           <div>
-            <p class="my-0">{{'Labels.YearlyIncome' | translate}}</p>
+            <p class="my-0">{{ "Labels.YearlyIncome" | translate }}</p>
           </div>
-          <span>{{totalSalary*12  | currency:'kr'}}</span>
+          <span>{{ totalSalary * 12 | currency: "kr" }}</span>
         </li>
 
-        <li class="list-group-item d-flex justify-content-between lh-sm bg-light">
+        <li
+          class="list-group-item d-flex justify-content-between lh-sm bg-light"
+        >
           <div>
-            <p class="my-0">{{'Labels.YearlyTax' | translate}}</p>
+            <p class="my-0">{{ "Labels.YearlyTax" | translate }}</p>
           </div>
-          <span>{{baseTax*12 | currency:'kr'}}</span>
+          <span>{{ baseTax * 12 | currency: "kr" }}</span>
         </li>
 
-        <li class="list-group-item d-flex justify-content-between lh-sm bg-light">
+        <li
+          class="list-group-item d-flex justify-content-between lh-sm bg-light"
+        >
           <div>
-            <p class="my-0">{{'Labels.YearlyIncomeAfterTax' | translate}}</p>
+            <p class="my-0">{{ "Labels.YearlyIncomeAfterTax" | translate }}</p>
           </div>
-          <span>{{monthlyIncomeAfterTax * 12 | currency:'kr'}}</span>
+          <span>{{ monthlyIncomeAfterTax * 12 | currency: "kr" }}</span>
         </li>
         <li class="list-group-item d-flex justify-content-between">
           <span>Total (kr)</span>
-          <strong>{{monthlyIncomeAfterTax * 12 | currency:'kr'}}</strong>
+          <strong>{{ monthlyIncomeAfterTax * 12 | currency: "kr" }}</strong>
         </li>
       </ul>
     </div>
-
   </div>
 </div>
